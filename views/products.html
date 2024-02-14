@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Products Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1>Products Page</h1>
+    <p>Welcome to the products page!</p>
+    <button id="previousUrlButton">Previous Page</button>
+    <button id="nextUrlButton">Next Page</button>
+    <script>
+        const urlArray = [
+            'http://localhost:3000/',
+            'http://localhost:3000/about',
+            'http://localhost:3000/contact',
+            'http://localhost:3000/products',
+            'http://localhost:3000/subscribe',
+            'http://localhost:3000/login',
+            'http://localhost:3000/register',
+        ]
+        const nextUrlButton = document.getElementById('nextUrlButton')
+        let currentIndex = 3; // Initialize the currentIndex variable
+        nextUrlButton.addEventListener('click', () => {
+            // Increment the index and wrap around if necessary
+            currentIndex = (currentIndex + 1) % urlArray.length;
+
+            // Change the URL to the new location based on the updated index
+            window.location.href = urlArray[currentIndex];
+        })
+        const previousUrlButton = document.getElementById('previousUrlButton')
+        previousUrlButton.addEventListener('click', () => {
+            // Decrement the index and wrap around if necessary
+            currentIndex = (currentIndex - 1) % urlArray.length;
+
+            // Change the URL to the new location based on the updated index
+            window.location.href = urlArray[currentIndex];
+        })
+    </script>
+</body>
+</html>
