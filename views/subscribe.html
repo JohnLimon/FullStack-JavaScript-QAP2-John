@@ -2,12 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Contact Page</title>
+    <title>Subscribe Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1>Contact Page</h1>
-    <p>Welcome to contact page!</p>
+    <h1>Subscribe Page</h1>
+    <p>Welcome to subscribe page!</p>
     <button id="previousUrlButton">Previous Page</button>
     <button id="nextUrlButton">Next Page</button>
     <script>
@@ -21,7 +21,7 @@
             'http://localhost:3000/register',
         ]
         const nextUrlButton = document.getElementById('nextUrlButton')
-        let currentIndex = 2; // Initialize the currentIndex variable
+        let currentIndex = 4; // Initialize the currentIndex variable
         nextUrlButton.addEventListener('click', () => {
             // Increment the index and wrap around if necessary
             currentIndex = (currentIndex + 1) % urlArray.length;
