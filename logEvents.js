@@ -21,7 +21,6 @@ const logEvents = async (code, message) => {
         const currFolder = 'logs/' + getYear(new Date());
         if(!fs.existsSync(path.join(__dirname, 'logs/'))) {
             // if the parent directory logs/ doesn't exist, create it
-            // is there a bug here?
             await fsPromises.mkdir(path.join(__dirname, 'logs/'));
             if(!fs.existsSync(path.join(__dirname, currFolder))) {
                 // create the directory for the year ./logs/yyyy
